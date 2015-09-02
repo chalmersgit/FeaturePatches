@@ -26,11 +26,11 @@ def getNumPatchElements(patches):
 
 if __name__ == "__main__":
 	print 'Patches'
-	width 		= 200
-	height 		= 200
+	width		= 200
+	height		= 200
 
-	N 			= int(width*height)		# total elements
-	patchSize 	= int(np.sqrt(width))	# square patch resolution using width
+	N			= int(width*height)		# total elements
+	patchSize	= int(np.sqrt(width))	# square patch resolution using width
 
 	arr = np.arange(N).reshape(height,width)
 
@@ -39,8 +39,8 @@ if __name__ == "__main__":
 	print 'Patch size:\t', patchSize
 	print
 
-	patches = getPatches(arr, (patchSize,patchSize), patchSize)
-	features = transToFeatVecs(patches)
+	patches 	= getPatches(arr, (patchSize,patchSize), patchSize)
+	features 	= transToFeatVecs(patches)
 
 	print patches.shape
 	print features.shape

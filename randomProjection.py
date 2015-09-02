@@ -39,7 +39,7 @@ def randomProjection(X, verbose = False):
 
 	k			= (20 * np.log(numFeats)) / (math.e*math.e)
 	reducedDims	= int(k)
-	norm 		= 1.0 / (np.sqrt(k))
+	norm		= 1.0 / (np.sqrt(k))
 
 	randMat		= (np.ones((numDims,reducedDims))*np.clip(1, -1, np.random.normal(0, 1, (numDims,reducedDims)))).astype(int)
 	X_reduced	= norm*np.dot(X,randMat)
@@ -65,8 +65,8 @@ if __name__ == "__main__":
 	print 'Patch size:\t', patchSize
 	print
 
-	patches = pa.getPatches(arr, (patchSize,patchSize), patchSize)
-	features = pa.transToFeatVecs(patches)
+	patches 	= pa.getPatches(arr, (patchSize,patchSize), patchSize)
+	features 	= pa.transToFeatVecs(patches)
 
 	featuresProj = randomProjection(features, True)
 
