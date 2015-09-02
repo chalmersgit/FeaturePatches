@@ -36,7 +36,7 @@ def randomProjection(X, verbose = False):
 	numDims 	= X.shape[1]
 
 	k			= (20 * np.log(numFeats)) / (math.e*math.e)
-	reducedDims = int(k)
+	reducedDims	= int(k)
 	norm 		= 1.0 / (np.sqrt(k))
 
 	randMat		= (np.ones((numDims,reducedDims))*np.clip(1, -1, np.random.normal(0, 1, (numDims,reducedDims)))).astype(int)
