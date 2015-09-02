@@ -1,9 +1,7 @@
-import numpy as np
-import math
-
-import patches as pa 
-
 """
+Random Projection
+Author: Andrew Chalmers, 2015
+
 Reduces the dimensionality of feature vectors using random projection.
 Feature vectors are obtained from patches of a matches using the patches module
 
@@ -24,6 +22,11 @@ http://vip.uwaterloo.ca/files/publications/Paper1JournalLiFieguth_final.pdf
 Stackoverflow:
 http://stackoverflow.com/questions/7474508/random-projection-algorithm-pseudo-code
 """
+
+import numpy as np
+import math
+
+import patches as pa 
 
 def randomProjection(X, verbose = False):
 	"""

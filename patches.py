@@ -1,13 +1,16 @@
-import numpy as np
-from skimage.util.shape import view_as_windows
-
 """
+Patch Extraction
+Author: Andrew Chalmers, 2015
+
 References:
 
 "Texture Classification from Random Features"
 2012, L. Liu and W. Fieguth)
 http://vip.uwaterloo.ca/files/publications/Paper1JournalLiFieguth_final.pdf
 """
+
+import numpy as np
+from skimage.util.shape import view_as_windows
 
 def getPatches(arr, patchSize, step=1):
 	return view_as_windows(arr, patchSize, step)
