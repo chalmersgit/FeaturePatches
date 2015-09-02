@@ -1,6 +1,5 @@
 import numpy as np
 import math
-from sklearn import random_projection
 
 import patches as pa 
 
