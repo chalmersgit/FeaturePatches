@@ -35,7 +35,7 @@ def randomProjection(X, verbose = False):
 	numFeats 	= X.shape[0]
 	numDims 	= X.shape[1]
 
-	k		= (20 * np.log(numFeats)) / (math.e*math.e)
+	k			= (20 * np.log(numFeats)) / (math.e*math.e)
 	reducedDims	= int(k)
 	norm 		= 1.0 / (np.sqrt(k))
 
